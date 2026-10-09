@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="nl">
   <head>
-    <meta charset="UTF-8" />git
+    <meta charset="UTF-8" />
     <title>Home</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
       <h1>Home</h1>
       <nav>
-        <a href="#introductie">Introductie</a>
-        <a href="#hobbies">Hobby's</a>
-        <a href="#contact">Contact</a>
-        <a href="overmij.html">Over mij</a>
+        <a href="#introductie" class="nav-btn">Introductie</a>
+        <a href="#hobbies" class="nav-btn">Hobby's</a>
+        <a href="#contact" class="nav-btn">Contact</a>
+        <!-- Nieuwe links naar de lesdemo's -->
+        <a href="#boxmodel" class="nav-btn">Box model</a>
+        <a href="#blockinline" class="nav-btn">Block / inline</a>
+        <a href="overmij.html" class="nav-btn">Over mij</a>
       </nav>
     </header>
 
     <main>
       <section id="introductie">
+
         <h2>Welkom</h2>
+          
+        <p class="intro">Dit is de inleidende alinea.</p>
+        <p>Dit is een gewone alinea.</p>
+        
         <p>Welkom op mijn <strong>portfolio website</strong>.</p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
@@ -59,6 +67,27 @@
           praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
           excepturi sint occaecati cupiditate non provident.
         </p>
+      </section>
+
+      <!-- DEMO 1: box-sizing (style.css deel 7) -->
+      <section id="boxmodel">
+        <h2>Het CSS box model</h2>
+        <p>Beide dozen hebben width: 300px, padding: 20px en border: 2px.</p>
+        <div class="box-zonder">content-box: 344px breed</div>
+        <div class="box-met">border-box: 300px breed</div>
+      </section>
+
+      <!-- DEMO 2: block, inline en inline-block (style.css deel 8) -->
+      <section id="blockinline">
+        <h2>Block en inline</h2>
+
+        <div class="block">Block: ik begin op een nieuwe regel</div>
+        <div class="block">Block: ik ook</div>
+
+        <p>Dit is tekst met een <span class="inline">inline span</span> erin.</p>
+
+        <span class="inline-block">inline-block</span>
+        <span class="inline-block">inline-block</span>
       </section>
 
       <section id="contact">

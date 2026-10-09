@@ -1,0 +1,119 @@
+/* =====================================================
+   CSS BOX MODEL
+   Van binnen naar buiten: content > padding > border > margin
+   ===================================================== */
+
+
+/* 1. box-sizing: padding en border tellen mee in de width */
+* {
+  box-sizing: border-box;
+}
+
+
+/* 2. Basis */
+body {
+  margin: 0;                          /* standaard ruimte van de browser weg */
+  font-family: Arial, sans-serif;
+  background-color: #f8e7b5;
+}
+
+header {
+  background-color: #ffbf00;
+  padding: 20px;                      /* ruimte binnen de header */
+}
+
+
+/* 3. Knoppen: <a> is inline, inline-block laat padding goed werken */
+.nav-btn {
+  display: inline-block;
+  padding: 10px 20px;                 /* boven/onder  links/rechts */
+  margin-bottom: 5px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border: 2px solid #333333;
+  border-radius: 8px;                 /* afgeronde hoeken */
+}
+
+.nav-btn:hover {
+  background-color: #970101;
+  color: white;
+}
+
+
+/* 4. Main: in het midden van de pagina */
+main {
+  max-width: 900px;
+  margin: 0 auto;                     /* auto = horizontaal centreren */
+}
+
+
+/* 5. Secties: het hele box model in één element */
+section {
+  background-color: white;
+  padding: 20px;                      /* ruimte BINNEN */
+  border: 2px solid #333333;          /* RAND */
+  border-radius: 8px;
+  margin: 16px;                       /* ruimte BUITEN */
+}
+
+.intro {
+  font-size: 18px;
+  color: #ff0000;
+}
+
+
+/* 6. Afbeelding: <img> is inline, block maakt centreren mogelijk */
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+
+/* 7. Demo box-sizing: beide 300px breed, maar... */
+.box-zonder {
+  box-sizing: content-box;            /* 300 + 40 padding + 4 border = 344px */
+  width: 300px;
+  padding: 20px;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  background-color: #ffd6d6;
+}
+
+.box-met {
+  box-sizing: border-box;             /* precies 300px */
+  width: 300px;
+  padding: 20px;
+  border: 2px solid black;
+  background-color: #d6f5d6;
+}
+
+
+/* 8. Demo block / inline / inline-block */
+.block {
+  display: block;                     /* nieuwe regel, volle breedte */
+  background-color: #8cb6c0;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.inline {
+  display: inline;                    /* blijft in de tekst */
+  background-color: #f9cc9d;
+  width: 300px;                       /* werkt NIET bij inline */
+}
+
+.inline-block {
+  display: inline-block;              /* naast elkaar, maar width werkt wel */
+  background-color: #c3d08b;
+  width: 150px;
+  padding: 10px;
+}
+
+
+/* 9. Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+}
